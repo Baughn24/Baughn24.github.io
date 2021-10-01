@@ -1,0 +1,232 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+div#sentence {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  header {
+    position: fixed;
+    width: 100%;
+    text-align: center;
+    color: white;
+    transition: .4s;
+  }
+  header:hover {
+    background: rgba(255,255,255,0.8);
+    color: #000;
+  }
+  h1 {
+    font-family: Moderne Sans, sans-serif;
+    text-align: center;
+    font-size: 2rem;
+    width: 100%;
+    letter-spacing: .5rem;
+  }
+  nav a {
+    text-decoration: none;
+    color: inherit;
+    padding: 1rem;
+  }
+  h2 { 
+    font-family: Century Schoolbook, Century Schoolbook L, Georgia, serif;
+    font-size: 8vmin;
+    text-align: center;
+    margin: 2rem 3rem 0;
+    mix-blend-mode: overlay;
+    color: #fff;
+    font-weight: 100;
+  }
+  h3 { 
+    font-family: Century Schoolbook, Century Schoolbook L, Georgia, serif;
+    font-size: 8vmin;
+    text-align: center;
+    margin: 2rem 3rem 0;
+    mix-blend-mode: overlay;
+    color: #fff;
+    font-weight: 100;
+  }
+
+.about1 {
+    padding: 20px;
+    background-image: -webkit-linear-gradient(360deg,#224e4d 10%,#083023 360%); background: linear-gradient(360deg,#224e4d 10%,#083023 360%);
+    border-top: 2px solid black;
+  }
+  
+.about1 .container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-column-gap: 50px;
+    background-color: rgba(92, 141, 244, 0.4);
+    border: 2px solid black;
+    font-size: 20px;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow:
+       inset 0 -3em 3em rgba(0,0,0,0.1),
+             0 0  0 2px rgba(0,0,0, 0.4),
+             0.3em 0.3em 1em rgba(0,0,0,0.3);
+}
+  
+.about1 .main-col {
+    color: black;
+  }
+  
+.flip-card1, .flip-card2 {
+    width: 300px;
+    height: 350px;
+    perspective: 1000px;
+    border-radius: 20px;
+    }
+
+#boxes {
+    background-color: #224e4d;
+    }
+
+.flip-card-back1 a, .flip-card-back2 a {
+    text-decoration: none;
+    color: #224e4d; 
+    font-size: 30px;
+  }
+.flip-card-back1 h1, .flip-card-back2 h1{
+color: rgba( 250, 250, 250, 0.3);
+font-weight: bold;
+text-decoration: underline;
+margin-top: 10px;
+  }
+
+  .flip-card-back1 p, .flip-card-back2 p {
+    font-size: 22px;
+  }
+
+  #boxes .container {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px solid black;
+  }
+  
+  #boxes .container .flip-card1, .flip-card2 {
+    width: 30%;
+    text-align: center;
+    padding: 10px;
+  }
+  
+  /* This container is needed to position the front and back side */
+  .flip-card-inner1, .flip-card-inner2{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+  }
+  
+  /* Do an horizontal flip when you move the mouse over the flip box container */
+  .flip-card1:hover .flip-card-inner1,  .flip-card2:hover .flip-card-inner2{
+    transform: rotateY(180deg);
+  }
+ /* Position the front and back side */
+  .flip-card-front1, .flip-card-back1, .flip-card-front2, .flip-card-back2{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+  }
+  
+  /* Style the front side (fallback if image is missing) */
+  .flip-card-front1, .flip-card-front2 {
+   color: black;
+  }
+  
+  /* Style the back side */
+.flip-card-back1, .flip-card-back2 {
+    background-color: rgba(0,0,0, 0.5);
+    color: rgb(231, 223, 229);
+    font-size: 30px;
+    transform: rotateY(180deg);
+  }
+
+#wrapper {
+    white-space: nowrap;
+}
+
+#wrapper div {
+    display: inline-block;
+    height: 200px;
+    width: 200px;
+    }
+
+.contact {
+/* background: rgb(255, 60, 0); */
+background-color: #243b55;
+color: white;
+clip-path: polygon(0 20%, 100% 0, 100% 80%, 0 100%);
+padding: 10rem 20%;
+}
+
+.contact .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  } 
+
+.contact h1 {
+  color:#243b55;
+}
+
+.contact h2 {
+  font-size: 25px;
+ }
+
+  .fa-envelope {
+    color: rgba( 92, 92, 92, 0.7);
+    font-size: 100px;
+    padding-right: 15px;
+  }
+
+.fa-github {
+  color:rgba(92,92,92,0.7);
+  font-size: 100px;
+  padding-right: 15px;
+  padding-left: 15px;
+  
+}
+.fa-linkedin {
+  color: rgba(92,92,92,0.7);
+  font-size: 100px;
+  padding-left: 15px;
+}
+
+footer {
+display: flex;
+justify-content: center;
+color: #224e4d;
+font-weight: bold;
+}
+  
+    @media(max-width:960px) {
+        .container {
+            padding-right: 3rem;
+            padding-left: 3rem;
+        }
+    }
+
+
